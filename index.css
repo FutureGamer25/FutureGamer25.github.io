@@ -4,13 +4,18 @@
 }
 
 @font-face {
+	font-family: "MSPaint Medium";
+	src: url("mspaint25.woff");
+}
+
+@font-face {
 	font-family: "Comic Sans Downloaded";
 	src: url("comic-sans.woff");
 }
 
 @keyframes backgroundScroll {
-	0% {background-position: 0px 0px, 100px 0px, 0px 0px;}
-	100% {background-position: 144px 112px, 172px 56px, -36px 28px;}
+	0% {background-position: 0px 0px, 0px 0px;}
+	100% {background-position: 135px 120px, -108px 93px;}
 }
 
 @keyframes titleSpin {
@@ -36,13 +41,13 @@
 
 body {
 	/* BACKGROUND */
-	background-color: #000000;
-	background-image: url("background_bigger.png"), url("background_big.png"), url("background.png");
+	background-color: #ffffff;
+	background-image: url("mspaint-background-3x.png"), url("mspaint-background-small-3x.png");
 	animation: backgroundScroll 4s linear infinite;
 	/* TEXT */
 	text-align: center;
-	color: #ffffff;
-	font-family: "Basic 8x8", "Courier New", Monospace;
+	color: #000000;
+	font-family: "MSPaint Medium", "Courier New", Monospace;
 }
 
 div.outerBox {
@@ -52,10 +57,17 @@ div.outerBox {
 	margin-right: auto;
 	margin-top: 16px;
 	margin-bottom: 16px;
+	/*
 	border-style: solid;
 	border-width: 6px;
-	border-color: #404040;
-	background-color: #000000;
+	border-color: #000000;
+	background-color: #ffffff;
+	*/
+	border-image: url("mspaint-9slice.png");
+	border-image-slice: 66 fill;
+	border-image-width: 66px;
+	border-image-repeat: stretch;
+	border-image-outset: 16px;
 }
 
 #footer {
@@ -81,19 +93,17 @@ h1 {
 }
 
 h2 {
-	/*font-size: 1.5em;*/
-	font-size: 1.5em;
+	font-size: 3em;
 	font-weight: normal;
 }
 
 a:link {
-	color: red;
-	/*font-size: 1.1em;*/
-	font-size: 1em;
+	color: #808080;
+	font-size: 2em;
 }
 
 a:visited {
-	color: purple;
+	color: #808080;
 }
 
 a:hover {
@@ -101,6 +111,5 @@ a:hover {
 }
 
 a:active {
-	color: pink;
 	text-transform: uppercase;
 }
